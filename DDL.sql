@@ -1,3 +1,5 @@
+alter session set nls_date_format = 'DD/MM/YYYY HH24:MI:SS';
+
 create table tb_cliente(
     id_C int not null,
     nome varchar2(30) not null,

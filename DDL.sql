@@ -18,7 +18,7 @@ create table tb_container(
     id_co int not null,
     id_c int not null,
     endereco varchar2(120) not null,
-    cor_luz varchar2(7) not null,
+    cor_luz varchar2(20) not null,
     intensidade_luz numeric(5,2) not null,
     intensidade_irrigacao int not null,
     periodo_irrigacao int not null,
@@ -84,7 +84,7 @@ order;
 create table tb_log_cor_luz(
     id_lcl int not null,
     id_co int not null,
-    cor_luz varchar2(7) not null,
+    cor_luz varchar2(20) not null,
     data_hora date not null,
     
     primary key(id_lcl)
@@ -159,7 +159,7 @@ create table tb_vegetal(
     id_v int not null,
     nome varchar(30) not null,
     temperatura_ideal numeric(5,2) not null,
-    cor_luz_ideal varchar2(7) not null,
+    cor_luz_ideal varchar2(20) not null,
     umidade_ideal numeric(5,2) not null,
     periodo_irrigacao_ideal int not null,
     intensidade_irrigacao_ideal int not null,

@@ -4,7 +4,7 @@ INSERT INTO tb_cliente VALUES (sq_cliente.nextval, 'Robert Pattinson', '164.832.
 
 -- Tabela Container
 INSERT INTO tb_container VALUES(sq_container.nextval, 0, 'Rua das Rosas', '#0000FF', 45.5, 1, 60, 25.3, 60.8, 50, 50);
-insert into tb_container values(sq_container.nextval, 0, 'Rua das Pedras', '#FFFF00', 35.5, 1, 50, 25.3, 57.8, 60, 60);
+INSERT INTO tb_container VALUES(sq_container.nextval, 0, 'Rua das Pedras', '#FFFF00', 35.5, 1, 50, 25.3, 57.8, 60, 60);
 
 -- Tabela Vegetal
 INSERT INTO tb_vegetal VALUES (sq_vegetal.nextval, 'Tomate', 25, '#F0E68C', 65, 20, 1, 80, 60);

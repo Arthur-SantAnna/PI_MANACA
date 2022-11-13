@@ -10,4 +10,8 @@ INSERT INTO tb_container VALUES(sq_container.nextval, 0, 'Rua das Pedras', '#FFF
 INSERT INTO tb_vegetal VALUES (sq_vegetal.nextval, 'Tomate', 25, '#F0E68C', 65, 20, 1, 80, 60);
 INSERT INTO tb_vegetal VALUES (sq_vegetal.nextval, 'Alface', 15, '#FF8C00', 80, 30, 2, 60, 45);
 INSERT INTO tb_vegetal VALUES (sq_vegetal.nextval, 'Hortelã-grosso', 18, '#8B0000', 75, 10, 1, 90, 30);
+INSERT INTO tb_vegetal VALUES (sq_vegetal.nextval, 'Espinafre', 17, '#FFD93B', 78, 60, 3, 75, 30);
+INSERT INTO tb_vegetal VALUES (sq_vegetal.nextval, 'Acelga', 17, '#FF4030', 55, 40, 1, 90, 33);
+INSERT INTO tb_vegetal VALUES (sq_vegetal.nextval, 'Cebolinha', 22, '#FE9200', 80, 30, 2, 85, 40);
+
 

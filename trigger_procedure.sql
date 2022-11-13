@@ -1,4 +1,4 @@
-ccreate or replace trigger tr_update_container
+create or replace trigger tr_update_container
 before update on tb_container
 for each row
 

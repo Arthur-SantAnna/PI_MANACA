@@ -1,3 +1,6 @@
+--O trigger tr_update_container é responsável por manter histórico das alterações feitas em cada container automaticamente,--
+--inserindo registros nas tabelas de log toda vez que uma alteração é feita em um container--
+
 create or replace trigger tr_update_container
 before update on tb_container
 for each row
@@ -33,6 +36,9 @@ begin
     
 end;
     
+--O trigger tr_insert_container é responsável por gerar o registro da primeira entrada de um container no sistema,--
+--captando as configurações iniciais--
+
 create or replace trigger tr_insert_container
 after insert on tb_container
 for each row
@@ -47,6 +53,10 @@ begin
         insert into tb_log_capacidade_tanque_atu values(sq_log_capacidade_tanque_atu.nextval,:new.id_co,:new.capacidade_tanque_atu,SYSDATE);
 end;
 
+
+--A procedure pc_checa_condicoes é responsável por checar se cada uma das configurações do container está de acordo com o que é ideal para cada vegetal,--
+--e devolve os parâmetros que não estiverem dentro da tolerância como 1. Essa procedure foi feita para ser utilizada pela aplicação,--
+--de modo a enviar notificações para o usuário periodicamente, caso algo esteja fora dos conformes.--
 CREATE OR REPLACE PROCEDURE pc_checa_condicoes 
     (pID_CO IN INT, pCOR_LUZ OUT INT, pINTENSIDADE_LUZ OUT INT, pINTENSIDADE_IRRIGACAO OUT INT, pPERIODO_IRRIGACAO OUT INT, pTEMPERATURA OUT INT,
      pUMIDADE OUT INT)

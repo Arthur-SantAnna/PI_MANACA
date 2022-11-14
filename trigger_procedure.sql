@@ -57,6 +57,7 @@ end;
 --A procedure pc_checa_condicoes é responsável por checar se cada uma das configurações do container está de acordo com o que é ideal para cada vegetal,--
 --e devolve os parâmetros que não estiverem dentro da tolerância como 1. Essa procedure foi feita para ser utilizada pela aplicação,--
 --de modo a enviar notificações para o usuário periodicamente, caso algo esteja fora dos conformes.--
+
 CREATE OR REPLACE PROCEDURE pc_checa_condicoes 
     (pID_CO IN INT, pCOR_LUZ OUT INT, pINTENSIDADE_LUZ OUT INT, pINTENSIDADE_IRRIGACAO OUT INT, pPERIODO_IRRIGACAO OUT INT, pTEMPERATURA OUT INT,
      pUMIDADE OUT INT)

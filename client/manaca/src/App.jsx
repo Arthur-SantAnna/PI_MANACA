@@ -1,7 +1,7 @@
 function App() {
 
   return (
-    <h1 className='bg-red-600'>Meu piru é grande</h1>
+    <h1 className='bg-red-600'>emerson</h1>
   )
 }
 
